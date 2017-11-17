@@ -38,5 +38,8 @@ func TestDecode(t *testing.T) {
 		t.Error(err)
 		return
 	}
-	t.Log(tag, data)
+	if tag != 1 || data != "天气不错" {
+		t.Error("解码失败")
+		return
+	}
 }
